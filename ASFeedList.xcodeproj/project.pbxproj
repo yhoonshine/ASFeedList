@@ -15,6 +15,10 @@
 		4C15DCFF22D19EE800AA0528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C15DCFD22D19EE800AA0528 /* LaunchScreen.storyboard */; };
 		4C15DD0A22D19EE800AA0528 /* ASFeedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15DD0922D19EE800AA0528 /* ASFeedListTests.swift */; };
 		4C15DD1522D19EE800AA0528 /* ASFeedListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15DD1422D19EE800AA0528 /* ASFeedListUITests.swift */; };
+		4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7422D1A33100A87880 /* FeedListViewController.swift */; };
+		4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */; };
+		4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */; };
+		4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */; };
 		738A5BFFB2542E6010C60678 /* Pods_ASFeedListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526042EB7DE5906E3FEDE87 /* Pods_ASFeedListTests.framework */; };
 		78877A0D265946587873A0A7 /* Pods_ASFeedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CB406F61AD185C7E508B6B /* Pods_ASFeedList.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		4C15DD1022D19EE800AA0528 /* ASFeedListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASFeedListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C15DD1422D19EE800AA0528 /* ASFeedListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASFeedListUITests.swift; sourceTree = "<group>"; };
 		4C15DD1622D19EE800AA0528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C76EE7422D1A33100A87880 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListCellNode.swift; sourceTree = "<group>"; };
 		50C9AC21CEA30B6C900DAC57 /* Pods-ASFeedListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.debug.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A11BC87F4F7ACE88184F253 /* Pods-ASFeedListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListUITests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListUITests/Pods-ASFeedListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B153C9D301EE5193BAF3C5A8 /* Pods-ASFeedListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +124,10 @@
 			children = (
 				4C15DCF422D19EE700AA0528 /* AppDelegate.swift */,
 				4C15DCF622D19EE700AA0528 /* ViewController.swift */,
+				4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */,
+				4C76EE7422D1A33100A87880 /* FeedListViewController.swift */,
+				4C76EE7E22D1EB0800A87880 /* CellNode */,
+				4C76EE7F22D1EB2000A87880 /* Extension */,
 				4C15DCF822D19EE700AA0528 /* Main.storyboard */,
 				4C15DCFB22D19EE800AA0528 /* Assets.xcassets */,
 				4C15DCFD22D19EE800AA0528 /* LaunchScreen.storyboard */,
@@ -142,6 +154,22 @@
 			path = ASFeedListUITests;
 			sourceTree = "<group>";
 		};
+		4C76EE7E22D1EB0800A87880 /* CellNode */ = {
+			isa = PBXGroup;
+			children = (
+				4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */,
+			);
+			path = CellNode;
+			sourceTree = "<group>";
+		};
+		4C76EE7F22D1EB2000A87880 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7EA60C896E1022DA78BB4524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +190,6 @@
 				1261ADB0D903334A22778E1D /* Pods-ASFeedListUITests.debug.xcconfig */,
 				5A11BC87F4F7ACE88184F253 /* Pods-ASFeedListUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -398,6 +425,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */,
+				4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */,
+				4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */,
+				4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */,
 				4C15DCF722D19EE700AA0528 /* ViewController.swift in Sources */,
 				4C15DCF522D19EE700AA0528 /* AppDelegate.swift in Sources */,
 			);
