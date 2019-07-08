@@ -33,7 +33,7 @@ class FeedListViewController: ASViewController <ASTableNode> {
 extension FeedListViewController: ASTableDataSource {
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 100
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -67,6 +67,7 @@
 		5A11BC87F4F7ACE88184F253 /* Pods-ASFeedListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListUITests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListUITests/Pods-ASFeedListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B153C9D301EE5193BAF3C5A8 /* Pods-ASFeedListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2E2F087614C430837083AF6 /* Pods-ASFeedList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedList.release.xcconfig"; path = "Target Support Files/Pods-ASFeedList/Pods-ASFeedList.release.xcconfig"; sourceTree = "<group>"; };
+		DB0F31DC22D2E46F00508967 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 		4C15DCE822D19EE700AA0528 = {
 			isa = PBXGroup;
 			children = (
+				DB0F31DC22D2E46F00508967 /* MyPlayground.playground */,
 				4C15DCF322D19EE700AA0528 /* ASFeedList */,
 				4C15DD0822D19EE800AA0528 /* ASFeedListTests */,
 				4C15DD1322D19EE800AA0528 /* ASFeedListUITests */,
@@ -330,22 +332,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
-				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
-				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
