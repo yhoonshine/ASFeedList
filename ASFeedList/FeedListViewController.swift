@@ -15,6 +15,8 @@ class FeedListViewController: ASViewController <ASTableNode> {
         let tableNode = ASTableNode(style: .plain)
         
         super.init(node: tableNode)
+        
+//        ASDisplayNode.shouldShowRangeDebugOverlay = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,8 +41,11 @@ extension FeedListViewController: ASTableDataSource {
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
         return FeedListCellNode()
     }
+    
 }
 
 extension FeedListViewController: ASTableDelegate {
-    
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+        tableNode.deselectRow(at: indexPath, animated: true)
+    }
 }
