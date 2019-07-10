@@ -13,7 +13,7 @@ struct Post: Codable {
     let title: String?
     let content: String?
     let user: User?
-    let images: [ImageEntity]
+    let image: [ImageEntity]?
 }
 
 struct User: Codable {
