@@ -94,35 +94,26 @@ class FeedListCellNode: ASCellNode {
         return contentTextNode
     }()
     
+    lazy var gridNode: GridNode = {
+        let gridNode = GridNode(imageCount: 9)
+        return gridNode
+    }()
+    
     override init() {
         super.init()
         automaticallyManagesSubnodes = true
-        makePictrueArray()
-    }
-    
-    var pictrueArray: [ASImageNode] = []
-    
-    func makePictrueArray() {
-        for _ in 0...6 {
-            let imageNode = ASImageNode()
-            imageNode.backgroundColor = .red
-            imageNode.style.preferredSize = CGSize(width: 100, height: 100)
-            pictrueArray.append(imageNode)
-        }
-        
     }
     
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let toolbarStack = layoutToolbarSpec()
         let contentStack = layoutContentSpec()
         let userInfoSpec = layoutUserInfoSpec()
-        let pictures = layoutPictureSpec()
         
         tagButtonNode.style.alignSelf = .start
         
         let vStack = ASStackLayoutSpec.vertical()
         vStack.spacing = 10.0
-        vStack.children = [userInfoSpec, tagButtonNode, contentStack, toolbarStack, pictures]
+        vStack.children = [userInfoSpec, tagButtonNode, contentStack, toolbarStack, gridNode]
         
         return ASInsetLayoutSpec(insets: UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15), child: vStack)
     }
@@ -171,15 +162,6 @@ private extension FeedListCellNode {
         toolbarStack.children = [hStack, moreButtonNode]
         
         return toolbarStack
-    }
-    
-    func layoutPictureSpec() -> ASLayoutSpec {
-        let hStack = ASStackLayoutSpec.horizontal()
-        hStack.children = pictrueArray
-        hStack.spacing = 20
-        hStack.lineSpacing = 20
-        hStack.flexWrap = .wrap
-        return hStack
     }
 }
 

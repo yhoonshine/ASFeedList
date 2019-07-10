@@ -11,12 +11,19 @@ import AsyncDisplayKit
 
 class FeedListViewController: ASViewController <ASTableNode> {
     
+    var postList: [Post] = []
+    
     init() {
         let tableNode = ASTableNode(style: .plain)
         
         super.init(node: tableNode)
         
 //        ASDisplayNode.shouldShowRangeDebugOverlay = true
+//        l = generateFeedList(with: "FeedList", type: Post.self)
+        guard let post = generateFeedList(with: "FeedList", type: Post.self) else { return }
+        postList.append(post)
+        postList.append(post)
+        postList.append(post)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,6 +35,7 @@ class FeedListViewController: ASViewController <ASTableNode> {
 
         node.dataSource = self
         node.delegate = self
+        
     }
 
 }
@@ -35,7 +43,7 @@ class FeedListViewController: ASViewController <ASTableNode> {
 extension FeedListViewController: ASTableDataSource {
     
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return postList.count
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
@@ -47,5 +55,25 @@ extension FeedListViewController: ASTableDataSource {
 extension FeedListViewController: ASTableDelegate {
     func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
         tableNode.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension FeedListViewController {
+    func generateFeedList<T: Codable>(with filename: String, type: T.Type) -> T? {
+        guard let path = Bundle.main.path(forResource: filename, ofType: "json") else {
+            fatalError("Can not find file path from \(filename)")
+        }
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            let list = try JSONDecoder().decode(T.self, from: data)
+            return list
+
+        } catch {
+            print("decode error")
+            print(error.localizedDescription)
+        }
+        
+        return nil
     }
 }

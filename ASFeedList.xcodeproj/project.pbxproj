@@ -21,6 +21,10 @@
 		4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */; };
 		738A5BFFB2542E6010C60678 /* Pods_ASFeedListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526042EB7DE5906E3FEDE87 /* Pods_ASFeedListTests.framework */; };
 		78877A0D265946587873A0A7 /* Pods_ASFeedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CB406F61AD185C7E508B6B /* Pods_ASFeedList.framework */; };
+		DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31DD22D58B6300508967 /* GridImageNode.swift */; };
+		DB0F31E222D58BC300508967 /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31E122D58BC300508967 /* GridNode.swift */; };
+		DB0F31E422D5BC3D00508967 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31E322D5BC3D00508967 /* Post.swift */; };
+		DB0F31E622D5DC6D00508967 /* FeedList.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0F31E522D5DC6D00508967 /* FeedList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		B153C9D301EE5193BAF3C5A8 /* Pods-ASFeedListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2E2F087614C430837083AF6 /* Pods-ASFeedList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedList.release.xcconfig"; path = "Target Support Files/Pods-ASFeedList/Pods-ASFeedList.release.xcconfig"; sourceTree = "<group>"; };
 		DB0F31DC22D2E46F00508967 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DB0F31DD22D58B6300508967 /* GridImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageNode.swift; sourceTree = "<group>"; };
+		DB0F31E122D58BC300508967 /* GridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNode.swift; sourceTree = "<group>"; };
+		DB0F31E322D5BC3D00508967 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DB0F31E522D5DC6D00508967 /* FeedList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +136,14 @@
 				4C15DCF622D19EE700AA0528 /* ViewController.swift */,
 				4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */,
 				4C76EE7422D1A33100A87880 /* FeedListViewController.swift */,
-				4C76EE7E22D1EB0800A87880 /* CellNode */,
+				4C76EE7E22D1EB0800A87880 /* Node */,
 				4C76EE7F22D1EB2000A87880 /* Extension */,
 				4C15DCF822D19EE700AA0528 /* Main.storyboard */,
 				4C15DCFB22D19EE800AA0528 /* Assets.xcassets */,
 				4C15DCFD22D19EE800AA0528 /* LaunchScreen.storyboard */,
 				4C15DD0022D19EE800AA0528 /* Info.plist */,
+				DB0F31E322D5BC3D00508967 /* Post.swift */,
+				DB0F31E522D5DC6D00508967 /* FeedList.json */,
 			);
 			path = ASFeedList;
 			sourceTree = "<group>";
@@ -156,12 +166,14 @@
 			path = ASFeedListUITests;
 			sourceTree = "<group>";
 		};
-		4C76EE7E22D1EB0800A87880 /* CellNode */ = {
+		4C76EE7E22D1EB0800A87880 /* Node */ = {
 			isa = PBXGroup;
 			children = (
 				4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */,
+				DB0F31DD22D58B6300508967 /* GridImageNode.swift */,
+				DB0F31E122D58BC300508967 /* GridNode.swift */,
 			);
-			path = CellNode;
+			path = Node;
 			sourceTree = "<group>";
 		};
 		4C76EE7F22D1EB2000A87880 /* Extension */ = {
@@ -304,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C15DCFF22D19EE800AA0528 /* LaunchScreen.storyboard in Resources */,
+				DB0F31E622D5DC6D00508967 /* FeedList.json in Resources */,
 				4C15DCFC22D19EE800AA0528 /* Assets.xcassets in Resources */,
 				4C15DCFA22D19EE700AA0528 /* Main.storyboard in Resources */,
 			);
@@ -416,10 +429,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */,
+				DB0F31E222D58BC300508967 /* GridNode.swift in Sources */,
 				4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */,
 				4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */,
 				4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */,
 				4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */,
+				DB0F31E422D5BC3D00508967 /* Post.swift in Sources */,
 				4C15DCF722D19EE700AA0528 /* ViewController.swift in Sources */,
 				4C15DCF522D19EE700AA0528 /* AppDelegate.swift in Sources */,
 			);
