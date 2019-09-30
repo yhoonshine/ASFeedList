@@ -22,7 +22,6 @@
 		738A5BFFB2542E6010C60678 /* Pods_ASFeedListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526042EB7DE5906E3FEDE87 /* Pods_ASFeedListTests.framework */; };
 		78877A0D265946587873A0A7 /* Pods_ASFeedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CB406F61AD185C7E508B6B /* Pods_ASFeedList.framework */; };
 		DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31DD22D58B6300508967 /* GridImageNode.swift */; };
-		DB0F31E222D58BC300508967 /* GridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31E122D58BC300508967 /* GridNode.swift */; };
 		DB0F31E422D5BC3D00508967 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31E322D5BC3D00508967 /* Post.swift */; };
 		DB0F31E622D5DC6D00508967 /* FeedList.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0F31E522D5DC6D00508967 /* FeedList.json */; };
 /* End PBXBuildFile section */
@@ -73,7 +72,6 @@
 		D2E2F087614C430837083AF6 /* Pods-ASFeedList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedList.release.xcconfig"; path = "Target Support Files/Pods-ASFeedList/Pods-ASFeedList.release.xcconfig"; sourceTree = "<group>"; };
 		DB0F31DC22D2E46F00508967 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DB0F31DD22D58B6300508967 /* GridImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageNode.swift; sourceTree = "<group>"; };
-		DB0F31E122D58BC300508967 /* GridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridNode.swift; sourceTree = "<group>"; };
 		DB0F31E322D5BC3D00508967 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DB0F31E522D5DC6D00508967 /* FeedList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +169,6 @@
 			children = (
 				4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */,
 				DB0F31DD22D58B6300508967 /* GridImageNode.swift */,
-				DB0F31E122D58BC300508967 /* GridNode.swift */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */,
-				DB0F31E222D58BC300508967 /* GridNode.swift in Sources */,
 				4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */,
 				4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */,
 				4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */,

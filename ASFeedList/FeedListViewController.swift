@@ -19,11 +19,8 @@ class FeedListViewController: ASViewController <ASTableNode> {
         super.init(node: tableNode)
         
 //        ASDisplayNode.shouldShowRangeDebugOverlay = true
-//        l = generateFeedList(with: "FeedList", type: Post.self)
-        guard let post = generateFeedList(with: "FeedList", type: Post.self) else { return }
-        postList.append(post)
-        postList.append(post)
-        postList.append(post)
+        let feeds = generateFeedList(with: "FeedList", type: Post.self)
+        postList += feeds
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,9 +32,7 @@ class FeedListViewController: ASViewController <ASTableNode> {
 
         node.dataSource = self
         node.delegate = self
-        
     }
-
 }
 
 extension FeedListViewController: ASTableDataSource {
@@ -47,9 +42,9 @@ extension FeedListViewController: ASTableDataSource {
     }
     
     func tableNode(_ tableNode: ASTableNode, nodeForRowAt indexPath: IndexPath) -> ASCellNode {
-        return FeedListCellNode()
+        let post = postList[indexPath.row]
+        return FeedListCellNode(post: post)
     }
-    
 }
 
 extension FeedListViewController: ASTableDelegate {
@@ -59,14 +54,14 @@ extension FeedListViewController: ASTableDelegate {
 }
 
 extension FeedListViewController {
-    func generateFeedList<T: Codable>(with filename: String, type: T.Type) -> T? {
+    func generateFeedList<T: Codable>(with filename: String, type: T.Type) -> [T] {
         guard let path = Bundle.main.path(forResource: filename, ofType: "json") else {
             fatalError("Can not find file path from \(filename)")
         }
         
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            let list = try JSONDecoder().decode(T.self, from: data)
+            let list = try JSONDecoder().decode([T].self, from: data)
             return list
 
         } catch {
@@ -74,6 +69,6 @@ extension FeedListViewController {
             print(error.localizedDescription)
         }
         
-        return nil
+        return []
     }
 }

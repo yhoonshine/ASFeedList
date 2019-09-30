@@ -13,20 +13,20 @@ struct Post: Codable {
     let title: String?
     let content: String?
     let user: User?
-    let images: [ImageEntity]
+    let intro: String?
+    let images: [ImageEntity]?
 }
 
 struct User: Codable {
     let id: Int
     let nickname: String?
-    let avatar: String?
+    let avatar: URL?
     let introduction: String?
     let verified: String?
 }
 
 struct ImageEntity: Codable {
-    var id: Int
     var thumb: String?
-    var url: String?
+    var url: URL?
     var original: String?
 }

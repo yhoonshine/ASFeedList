@@ -8,6 +8,7 @@ target 'ASFeedList' do
 
   # Pods for ASFeedList
   pod 'Texture'
+  pod 'GDPerformanceView-Swift'
 
   target 'ASFeedListTests' do
     inherit! :search_paths
