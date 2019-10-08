@@ -15,6 +15,9 @@ struct Post: Codable {
     let user: User?
     let intro: String?
     let images: [ImageEntity]?
+    let challenge: Challenge?
+    let replies: [Comment]?
+    let createTime: Date?
 }
 
 struct User: Codable {
@@ -26,7 +29,19 @@ struct User: Codable {
 }
 
 struct ImageEntity: Codable {
-    var thumb: String?
-    var url: URL?
-    var original: String?
+    let thumb: String?
+    let url: URL?
+    let original: String?
+}
+
+struct Challenge: Codable {
+    let id: Int?
+    let title: String?
+}
+
+struct Comment: Codable {
+        let id: Int
+    let content: String?
+    var images: [ImageEntity]?
+    var user: User?
 }

@@ -27,12 +27,6 @@ class ViewController: UIViewController {
         view.addSubview(tableView)
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        let overviewVC = OverviewViewController()
-        navigationController?.pushViewController(overviewVC, animated: true)
-    }
-
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -49,6 +43,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         let exampleClass = examples[indexPath.row]
         navigationController?.pushViewController(exampleClass.init(), animated: true)
     }

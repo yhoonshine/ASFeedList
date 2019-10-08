@@ -10,14 +10,13 @@ import UIKit
 import AsyncDisplayKit
 
 class GridImageNode: ASDisplayNode {
-    var items: [ASNetworkImageNode] = []
+    private var items: [ASNetworkImageNode] = []
     
     private let numberOfRow: CGFloat = 3
     
     init(imageURLs: [URL], maxCount: Int = 9) {
         super.init()
         setupItems(with: imageURLs, maxCount: maxCount)
-        backgroundColor = .lightGray
         automaticallyManagesSubnodes = true
     }
     
@@ -26,7 +25,6 @@ class GridImageNode: ASDisplayNode {
             .prefix(maxCount)
             .forEach { url in
                 let imageNode = ASNetworkImageNode()
-                imageNode.backgroundColor = .red
                 imageNode.cornerRadius = 6.0
                 imageNode.url = url
                 items.append(imageNode)
