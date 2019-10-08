@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import GDPerformanceView_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    lazy var performanceView: PerformanceMonitor = {
+        let performanceView = PerformanceMonitor()
+        performanceView.performanceViewConfigurator.options = [.performance, .memory]
+        return performanceView
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let nav = UINavigationController(rootViewController: ViewController())
+        window?.rootViewController = nav
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
+        
+        #if DEBUG
+        performanceView.start()
+        #endif
+        
         return true
     }
 

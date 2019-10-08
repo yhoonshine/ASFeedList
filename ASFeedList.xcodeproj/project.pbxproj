@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,8 +15,18 @@
 		4C15DCFF22D19EE800AA0528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C15DCFD22D19EE800AA0528 /* LaunchScreen.storyboard */; };
 		4C15DD0A22D19EE800AA0528 /* ASFeedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15DD0922D19EE800AA0528 /* ASFeedListTests.swift */; };
 		4C15DD1522D19EE800AA0528 /* ASFeedListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15DD1422D19EE800AA0528 /* ASFeedListUITests.swift */; };
+		4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7422D1A33100A87880 /* FeedListViewController.swift */; };
+		4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */; };
+		4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */; };
+		4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */; };
 		738A5BFFB2542E6010C60678 /* Pods_ASFeedListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526042EB7DE5906E3FEDE87 /* Pods_ASFeedListTests.framework */; };
 		78877A0D265946587873A0A7 /* Pods_ASFeedList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CB406F61AD185C7E508B6B /* Pods_ASFeedList.framework */; };
+		DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31DD22D58B6300508967 /* GridImageNode.swift */; };
+		DB0F31E422D5BC3D00508967 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F31E322D5BC3D00508967 /* Post.swift */; };
+		DB0F31E622D5DC6D00508967 /* FeedList.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0F31E522D5DC6D00508967 /* FeedList.json */; };
+		DBD040DD234C2E78009400C6 /* CommentListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD040DC234C2E78009400C6 /* CommentListNode.swift */; };
+		DBD040DF234C39FA009400C6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD040DE234C39FA009400C6 /* UIColor+Extension.swift */; };
+		DBD040E1234C6783009400C6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD040E0234C6783009400C6 /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +65,21 @@
 		4C15DD1022D19EE800AA0528 /* ASFeedListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ASFeedListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C15DD1422D19EE800AA0528 /* ASFeedListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASFeedListUITests.swift; sourceTree = "<group>"; };
 		4C15DD1622D19EE800AA0528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C76EE7422D1A33100A87880 /* FeedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
+		4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListCellNode.swift; sourceTree = "<group>"; };
 		50C9AC21CEA30B6C900DAC57 /* Pods-ASFeedListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.debug.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5A11BC87F4F7ACE88184F253 /* Pods-ASFeedListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListUITests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListUITests/Pods-ASFeedListUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B153C9D301EE5193BAF3C5A8 /* Pods-ASFeedListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedListTests.release.xcconfig"; path = "Target Support Files/Pods-ASFeedListTests/Pods-ASFeedListTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2E2F087614C430837083AF6 /* Pods-ASFeedList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASFeedList.release.xcconfig"; path = "Target Support Files/Pods-ASFeedList/Pods-ASFeedList.release.xcconfig"; sourceTree = "<group>"; };
+		DB0F31DC22D2E46F00508967 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		DB0F31DD22D58B6300508967 /* GridImageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridImageNode.swift; sourceTree = "<group>"; };
+		DB0F31E322D5BC3D00508967 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DB0F31E522D5DC6D00508967 /* FeedList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FeedList.json; sourceTree = "<group>"; };
+		DBD040DC234C2E78009400C6 /* CommentListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListNode.swift; sourceTree = "<group>"; };
+		DBD040DE234C39FA009400C6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		DBD040E0234C6783009400C6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +113,7 @@
 		4C15DCE822D19EE700AA0528 = {
 			isa = PBXGroup;
 			children = (
+				DB0F31DC22D2E46F00508967 /* MyPlayground.playground */,
 				4C15DCF322D19EE700AA0528 /* ASFeedList */,
 				4C15DD0822D19EE800AA0528 /* ASFeedListTests */,
 				4C15DD1322D19EE800AA0528 /* ASFeedListUITests */,
@@ -116,10 +138,16 @@
 			children = (
 				4C15DCF422D19EE700AA0528 /* AppDelegate.swift */,
 				4C15DCF622D19EE700AA0528 /* ViewController.swift */,
+				4C76EE7622D1A52F00A87880 /* OverviewViewController.swift */,
+				4C76EE7422D1A33100A87880 /* FeedListViewController.swift */,
+				4C76EE7E22D1EB0800A87880 /* Node */,
+				4C76EE7F22D1EB2000A87880 /* Extension */,
 				4C15DCF822D19EE700AA0528 /* Main.storyboard */,
 				4C15DCFB22D19EE800AA0528 /* Assets.xcassets */,
 				4C15DCFD22D19EE800AA0528 /* LaunchScreen.storyboard */,
 				4C15DD0022D19EE800AA0528 /* Info.plist */,
+				DB0F31E322D5BC3D00508967 /* Post.swift */,
+				DB0F31E522D5DC6D00508967 /* FeedList.json */,
 			);
 			path = ASFeedList;
 			sourceTree = "<group>";
@@ -142,6 +170,26 @@
 			path = ASFeedListUITests;
 			sourceTree = "<group>";
 		};
+		4C76EE7E22D1EB0800A87880 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				4C76EE7C22D1EAF700A87880 /* FeedListCellNode.swift */,
+				DB0F31DD22D58B6300508967 /* GridImageNode.swift */,
+				DBD040DC234C2E78009400C6 /* CommentListNode.swift */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		4C76EE7F22D1EB2000A87880 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4C76EE7822D1AFF000A87880 /* NSAttributedString+Extension.swift */,
+				DBD040DE234C39FA009400C6 /* UIColor+Extension.swift */,
+				DBD040E0234C6783009400C6 /* Date+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7EA60C896E1022DA78BB4524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +210,6 @@
 				1261ADB0D903334A22778E1D /* Pods-ASFeedListUITests.debug.xcconfig */,
 				5A11BC87F4F7ACE88184F253 /* Pods-ASFeedListUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -275,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C15DCFF22D19EE800AA0528 /* LaunchScreen.storyboard in Resources */,
+				DB0F31E622D5DC6D00508967 /* FeedList.json in Resources */,
 				4C15DCFC22D19EE800AA0528 /* Assets.xcassets in Resources */,
 				4C15DCFA22D19EE700AA0528 /* Main.storyboard in Resources */,
 			);
@@ -303,22 +351,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
-				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
-				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ASFeedList/Pods-ASFeedList-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -398,8 +435,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0F31DE22D58B6300508967 /* GridImageNode.swift in Sources */,
+				DBD040E1234C6783009400C6 /* Date+Extension.swift in Sources */,
+				4C76EE7522D1A33100A87880 /* FeedListViewController.swift in Sources */,
+				4C76EE7722D1A52F00A87880 /* OverviewViewController.swift in Sources */,
+				4C76EE7922D1AFF000A87880 /* NSAttributedString+Extension.swift in Sources */,
+				DBD040DD234C2E78009400C6 /* CommentListNode.swift in Sources */,
+				4C76EE7D22D1EAF700A87880 /* FeedListCellNode.swift in Sources */,
+				DB0F31E422D5BC3D00508967 /* Post.swift in Sources */,
 				4C15DCF722D19EE700AA0528 /* ViewController.swift in Sources */,
 				4C15DCF522D19EE700AA0528 /* AppDelegate.swift in Sources */,
+				DBD040DF234C39FA009400C6 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

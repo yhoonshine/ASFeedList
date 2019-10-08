@@ -9,12 +9,43 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let examples: [UIViewController.Type] = [OverviewViewController.self, FeedListViewController.self]
+    
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: view.bounds, style: .plain)
+        tableView.rowHeight = 80.0
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Examples"
+        view.addSubview(tableView)
     }
-
 
 }
 
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return examples.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let exampleClass = examples[indexPath.row]
+        cell.textLabel?.text = "\(exampleClass)"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let exampleClass = examples[indexPath.row]
+        navigationController?.pushViewController(exampleClass.init(), animated: true)
+    }
+}
