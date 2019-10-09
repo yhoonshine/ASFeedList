@@ -34,7 +34,7 @@ class GridImageNode: ASDisplayNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let spacing: CGFloat = 10.0
         
-        let itemWidth = (constrainedSize.max.width - (numberOfRow - 1) * spacing) / numberOfRow
+        let itemWidth = floor((constrainedSize.max.width - (numberOfRow - 1) * spacing) / numberOfRow)
         items.forEach { $0.style.preferredSize = CGSize(width: itemWidth, height: itemWidth) }
         
         let hStack = ASStackLayoutSpec.horizontal()

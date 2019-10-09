@@ -211,7 +211,9 @@ private extension FeedListCellNode {
 // MARK: - Appearance
 // 
 private extension FeedListCellNode {
+    
     struct Appearance {
+        
         let avatarSize = CGSize(width: 35.0, height: 35.0)
         
         let toolbarItemSize = CGSize(width: 50, height: 30)
