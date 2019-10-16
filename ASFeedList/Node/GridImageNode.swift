@@ -26,7 +26,7 @@ class GridImageNode: ASDisplayNode {
             .forEach { url in
                 let imageNode = ASNetworkImageNode()
                 imageNode.cornerRadius = 6.0
-                imageNode.url = url
+                imageNode.setURL(url, resetToDefault: false)
                 items.append(imageNode)
             }
     }
