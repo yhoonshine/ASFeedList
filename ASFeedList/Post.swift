@@ -29,9 +29,9 @@ struct User: Codable {
 }
 
 struct ImageEntity: Codable {
-    let thumb: String?
+    let thumb: URL?
     let url: URL?
-    let original: String?
+    let original: URL?
 }
 
 struct Challenge: Codable {

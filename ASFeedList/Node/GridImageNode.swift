@@ -2,7 +2,7 @@
 //  GridImageNode.swift
 //  ASFeedList
 //
-//  Created by Mango on 2019/7/10.
+//  Created by Mango on 2019/9/10.
 //  Copyright © 2019 Albatross Lab. All rights reserved.
 //
 
@@ -25,6 +25,7 @@ class GridImageNode: ASDisplayNode {
             .prefix(maxCount)
             .forEach { url in
                 let imageNode = ASNetworkImageNode()
+                imageNode.placeholderColor = UIColor.random
                 imageNode.cornerRadius = 6.0
                 imageNode.setURL(url, resetToDefault: false)
                 items.append(imageNode)
