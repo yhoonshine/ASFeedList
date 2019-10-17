@@ -2,7 +2,7 @@
 //  Date+Extension.swift
 //  ASFeedList
 //
-//  Created by Mango on 2019/7/8.
+//  Created by Mango on 2019/9/8.
 //  Copyright © 2019 Albatross Lab. All rights reserved.
 //
 

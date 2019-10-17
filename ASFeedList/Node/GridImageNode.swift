@@ -2,7 +2,7 @@
 //  GridImageNode.swift
 //  ASFeedList
 //
-//  Created by Mango on 2019/7/10.
+//  Created by Mango on 2019/9/10.
 //  Copyright © 2019 Albatross Lab. All rights reserved.
 //
 
@@ -25,8 +25,9 @@ class GridImageNode: ASDisplayNode {
             .prefix(maxCount)
             .forEach { url in
                 let imageNode = ASNetworkImageNode()
+                imageNode.placeholderColor = UIColor.random
                 imageNode.cornerRadius = 6.0
-                imageNode.url = url
+                imageNode.setURL(url, resetToDefault: false)
                 items.append(imageNode)
             }
     }
@@ -34,7 +35,7 @@ class GridImageNode: ASDisplayNode {
     override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let spacing: CGFloat = 10.0
         
-        let itemWidth = (constrainedSize.max.width - (numberOfRow - 1) * spacing) / numberOfRow
+        let itemWidth = floor((constrainedSize.max.width - (numberOfRow - 1) * spacing) / numberOfRow)
         items.forEach { $0.style.preferredSize = CGSize(width: itemWidth, height: itemWidth) }
         
         let hStack = ASStackLayoutSpec.horizontal()
